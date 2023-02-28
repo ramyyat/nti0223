@@ -1,0 +1,358 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css";
+
+@font-face {
+    font-family: poppin;
+    src: url(../fonts/poppins/Poppins-Bold.ttf);
+}
+
+:root {
+    --title-color : #222;
+    --site-red-color : #d61c22;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* ------------- general formats -------------- */
+h2 {
+    color: var(--site-red-color);
+    font-style: italic;
+    font-size: 30px;
+}
+h1 {
+    color: var(--title-color);
+    font-weight: 700;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: poppin;
+    letter-spacing: 6px;
+}
+p {
+    color: #666;
+    line-height: 1.7;
+    text-align: center;
+}
+
+
+/* --------------- main menu ----------------- */
+#main-menu {
+    /* border: 1px red solid; */
+    background: linear-gradient(rgba(0,0,0,0.6) , rgba(0,0,0,0));
+    color: white;
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 33px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#menu-items {
+    display: flex;
+    width: 65%;
+    justify-content: space-between;
+}
+#menu-social-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 10%;
+}
+#upperBorder {
+    position: fixed;
+    top: 0;
+    height: 5px;
+    width: 100%;
+    background-color: var(--site-red-color);
+}
+
+/* -------- up to page top -------- */
+#upToPageTop {
+    background-color: black;    
+    opacity: 0.5;
+    width: 40px;
+    height: 40px;
+    bottom: 40px;
+    right: 40px;
+    position: fixed;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+#upToPageTop:hover {
+    background-color: var(--site-red-color);
+    opacity: 1;
+    transition: all 0.4s;
+}
+
+#upToPageTop i {
+    color: white;
+    transform: translateY(12px);
+}
+/* -------- about page ------------ */
+#about-banner {
+    width: 100%;
+    height: 545px;
+    background-image: url(../img/bg-title-page-03.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+}
+#banner-title {
+    font-size: 48px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* padding-top: 40px; */
+    transform: translateY(50%);
+}
+
+/* ------------------- our story ------------------- */
+
+#our-story {
+    /* height: 264px; */
+    padding: 116px 15px 110px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#our-story * {
+    width: 55%;
+    text-align: center;
+}
+
+/* -------------- our-video ------------- */
+#our-video {
+    width: 100%;
+    height: 720px;
+    background-image: url(../img/header-menu-01.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#our-video .playVideoButton {
+    width: 70px;
+    height: 70px;
+    margin: 43px auto;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+#our-video .playVideoButton:hover {
+    background-color: #d61c22aa;
+    transform: scale(120%);
+    transition: all 0.3s;
+}
+#our-video .playVideoButton:hover i {
+    opacity: 1;
+    color: white;
+}
+
+/* -------------- recipes ---------------- */
+#recipes {
+    padding: 116px 15px 110px 15px;
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+}
+#recipesText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 64px;
+    width: 50%;
+}
+#recipesImage {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+#recipesImage > div {
+    width: 390px;
+    height: 390px;
+    background-image: url(../img/our-story-01.jpg);
+    background-position: center;
+    background-size: 400px;
+    border-radius: 16px;
+    transition: all 0.4s;
+}
+#recipesImage > div:hover {
+    background-size: 450px;
+    transition: all 0.4s;    
+}
+.imgCoverRed {
+    background-color: #d61c2200;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s;
+}
+#recipesImage > div:hover .imgCoverRed {
+    background-color: #d61c22aa;
+    transition: all 0.4s;
+}
+.imgCoverRed i {
+    opacity: 0;
+    color: white;
+    font-size: 48px;
+    transition: all 0.4s;
+}
+#recipesImage > div:hover .imgCoverRed i {
+    opacity: 1;
+    font-size: 64px;
+    transition: all 0.2s;
+}
+
+/* ----------------- chef cards ----------------- */
+#chefs {
+    background-color: #999;
+    width: 100%;
+    height: 620px;
+    padding: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.oneChefCard {
+    width: 30%;
+    height: 100%;
+    position: relative;
+    top: 25%;
+    border: #222 3px solid;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#chefCards {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.chefCardPic {
+    width: 110px;
+    height: 110px;
+    border: solid 3px var(--site-red-color);
+    background-size: 120px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+}
+.chefCardPic + h3 {
+    margin-top: 70px;
+}
+
+
+
+
+
+/* ----------------- sign up -------------------- */
+#signUp {
+    background-color: #bbb;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 120px;
+
+}
+#inputEmail {
+    border: #ddd solid 2px;
+    padding: 9px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+#inputEmail:has(input:focus) {
+    border: #d61c22 solid 2px;
+}
+
+#signUpEmail {
+    font-size: 32px;
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+
+
+
+/* ------------------------ responsive design ---------------------------- */
+@media only screen and (max-width: 900px) {
+    #main-menu {
+        padding: 33px 2%;
+    }
+    #menu-items {
+        /* visibility: hidden; */
+        display: none;
+    }
+    #menu-social-icons {
+        /* display: flex;
+        flex-direction: column; */
+        width: 30%;
+    }
+    #menu-social-icons i {
+        font-size: 24px;
+        /* margin-bottom: 15px; */
+        margin-right: 15px;
+    }
+
+    /* ------------------- chefs --------------- */
+    #chefs {
+        height: auto;
+    }
+    #chefCards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .oneChefCard {
+        margin-top: 80px;
+        width: 70%;
+        padding: 16px;
+    }
+
+    /* ---------------  recipes ---------------- */
+    #recipes {
+        flex-direction: column;
+        align-items: center;
+    }
+    #recipesText {
+        width: 100%;
+    }
+
+    /* --------------- #signUp ---------------- */
+    #signUp {
+        flex-direction: column;
+        align-items: center;
+    }
+    #signUp * {
+        margin: 15px;
+    }
+    #signUp i{
+        font-size: 24px;
+    }
+}
